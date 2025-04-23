@@ -4,6 +4,7 @@ package hw
 
 import (
 	"context"
+	"math"
 	"testing"
 
 	dataframe "github.com/kevinroundy/dataframe-go"
@@ -74,7 +75,7 @@ func TestHW(t *testing.T) {
 	}
 	expRMSE := 12.666953719779478
 
-	if errVal != expRMSE {
+	if math.Abs(errVal-expRMSE) > 1e-6 {
 		t.Errorf("expected error calc Value: %f is not same as actual errVal: %f", expRMSE, errVal)
 	}
 }

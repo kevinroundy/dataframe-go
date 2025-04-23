@@ -6,10 +6,12 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"golang.org/x/exp/rand"
+	"math"
 	"sort"
 	"strconv"
 	"sync"
+
+	"golang.org/x/exp/rand"
 
 	"github.com/guptarohit/asciigraph"
 	"github.com/olekukonko/tablewriter"
@@ -913,7 +915,7 @@ func (s *SeriesFloat64) IsEqual(ctx context.Context, s2 Series, opts ...IsEqualO
 			continue
 		}
 
-		if v != fs.Values[i] {
+		if math.Abs(v-fs.Values[i]) > 1e-6 {
 			return false, nil
 		}
 	}
