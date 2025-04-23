@@ -1,17 +1,17 @@
-This project is a fork of https://github.com/rocketlaunchr/dataframe-go. I am making my fork public because the project has not been updated for 4 years, and it has a nice (but buggy) implementation of the Holt-Winters algorithm. I patched the algorithm, but unless/until the authors of the dataframe-go project accept my changes, I am making this public so my projects can have access to a less buggy HW implementation. 
+This project is a fork of https://github.com/kevinroundy/dataframe-go. I am making my fork public because the project has not been updated for 4 years, and it has a nice (but buggy) implementation of the Holt-Winters algorithm. I patched the algorithm, but unless/until the authors of the dataframe-go project accept my changes, I am making this public so my projects can have access to a less buggy HW implementation. 
 
 <p align="right">
   ⭐ &nbsp;&nbsp;<strong>the project to show your appreciation.</strong> :arrow_upper_right:
 </p>
 
 <p align="right">
-  <a href="http://godoc.org/github.com/rocketlaunchr/dataframe-go"><img src="http://godoc.org/github.com/rocketlaunchr/dataframe-go?status.svg" /></a>
-  <a href="https://goreportcard.com/report/github.com/rocketlaunchr/dataframe-go"><img src="https://goreportcard.com/badge/github.com/rocketlaunchr/dataframe-go" /></a>
-  <a href="https://gocover.io/github.com/rocketlaunchr/dataframe-go"><img src="http://gocover.io/_badge/github.com/rocketlaunchr/dataframe-go" /></a>
+  <a href="http://godoc.org/github.com/kevinroundy/dataframe-go"><img src="http://godoc.org/github.com/kevinroundy/dataframe-go?status.svg" /></a>
+  <a href="https://goreportcard.com/report/github.com/kevinroundy/dataframe-go"><img src="https://goreportcard.com/badge/github.com/kevinroundy/dataframe-go" /></a>
+  <a href="https://gocover.io/github.com/kevinroundy/dataframe-go"><img src="http://gocover.io/_badge/github.com/kevinroundy/dataframe-go" /></a>
 </p>
 
 <p align="center">
-<img src="https://github.com/rocketlaunchr/dataframe-go/raw/master/assets/logo.png" alt="dataframe-go" />
+<img src="https://github.com/kevinroundy/dataframe-go/raw/master/assets/logo.png" alt="dataframe-go" />
 </p>
 
 Dataframes are used for statistics, machine-learning, and data manipulation/exploration. You can think of a Dataframe as an excel spreadsheet.
@@ -37,16 +37,16 @@ It is recommended your package manager locks to a commit id instead of the maste
 11. Math functions
 12. Plotting (cross-platform)
 
-See [Tutorial](https://github.com/rocketlaunchr/dataframe-go#tutorial) here.
+See [Tutorial](https://github.com/kevinroundy/dataframe-go#tutorial) here.
 
 ## Installation
 
 ```
-go get -u github.com/rocketlaunchr/dataframe-go
+go get -u github.com/kevinroundy/dataframe-go
 ```
 
 ```go
-import dataframe "github.com/rocketlaunchr/dataframe-go"
+import dataframe "github.com/kevinroundy/dataframe-go"
 ```
 
 # DataFrames
@@ -226,8 +226,8 @@ std := stat.StdDev(sf.Values, nil)
 ```go
 import (
 	chart "github.com/wcharczuk/go-chart"
-	"github.com/rocketlaunchr/dataframe-go/plot"
-	wc "github.com/rocketlaunchr/dataframe-go/plot/wcharczuk/go-chart"
+	"github.com/kevinroundy/dataframe-go/plot"
+	wc "github.com/kevinroundy/dataframe-go/plot/wcharczuk/go-chart"
 )
 
 sales := dataframe.NewSeriesFloat64("sales", nil, 50.3, nil, 23.4, 56.2, 89, 32, 84.2, 72, 89)
@@ -245,13 +245,13 @@ plt.Display(plot.None)
 Output:
 
 <p align="center">
-<img src="https://github.com/rocketlaunchr/dataframe-go/raw/master/assets/plot.png" alt="plot" />
+<img src="https://github.com/kevinroundy/dataframe-go/raw/master/assets/plot.png" alt="plot" />
 </p>
 
 ## Math Functions
 
 ```go
-import "github.com/rocketlaunchr/dataframe-go/math/funcs"
+import "github.com/kevinroundy/dataframe-go/math/funcs"
 
 res := 24
 sx := dataframe.NewSeriesFloat64("x", nil, utils.Float64Seq(1, float64(res), 1))
@@ -266,7 +266,7 @@ funcs.Evaluate(ctx, df, fn, 1)
 Output:
 
 <p align="center">
-<img src="https://github.com/rocketlaunchr/dataframe-go/raw/master/assets/sine.png" alt="sine wave" />
+<img src="https://github.com/kevinroundy/dataframe-go/raw/master/assets/sine.png" alt="sine wave" />
 </p>
 
 ## Importing Data

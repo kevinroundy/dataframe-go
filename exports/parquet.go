@@ -12,7 +12,7 @@ import (
 	"time"
 
 	dynamicstruct "github.com/ompluscator/dynamic-struct"
-	dataframe "github.com/rocketlaunchr/dataframe-go"
+	dataframe "github.com/kevinroundy/dataframe-go"
 	"github.com/xitongsys/parquet-go-source/writerfile"
 	"github.com/xitongsys/parquet-go/parquet"
 	"github.com/xitongsys/parquet-go/writer"
