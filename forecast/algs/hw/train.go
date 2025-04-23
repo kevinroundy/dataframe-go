@@ -28,6 +28,8 @@ func (hw *HoltWinters) trainSeries(ctx context.Context, start, end int) error {
 	)
 
 	y := hw.sf.Values[start : end+1]
+	y_start := 0
+	y_end := len(y) - 1
 
 	seasonals := initialSeasonalComponents(y, period, hw.cfg.SeasonalMethod)
 
@@ -39,14 +41,14 @@ func (hw *HoltWinters) trainSeries(ctx context.Context, start, end int) error {
 	var mse float64 // mean squared error
 
 	// Training smoothing Level
-	for i := start; i < end+1; i++ {
+	for i := y_start; i < y_end+1; i++ {
 		if err := ctx.Err(); err != nil {
 			return err
 		}
 
 		xt := y[i]
 
-		if i == start { // Set initial smooth
+		if i == y_start { // Set initial smooth
 			st = xt
 			hw.tstate.initialSmooth = xt
 		} else {
