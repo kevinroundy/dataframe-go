@@ -1,3 +1,5 @@
+This project is a fork of https://github.com/rocketlaunchr/dataframe-go. I am making my fork public because the project has not been updated for 4 years, and it has a nice (but buggy) implementation of the Holt-Winters algorithm. I patched the algorithm, but unless/until the authors of the dataframe-go project accept my changes, I am making this public so my projects can have access to a less buggy HW implementation. 
+
 <p align="right">
   ⭐ &nbsp;&nbsp;<strong>the project to show your appreciation.</strong> :arrow_upper_right:
 </p>
