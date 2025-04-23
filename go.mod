@@ -1,4 +1,4 @@
-module github.com/rocketlaunchr/dataframe-go
+module github.com/kevinroundy/dataframe-go
 
 go 1.15
 
